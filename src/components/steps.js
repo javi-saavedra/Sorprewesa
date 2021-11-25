@@ -86,11 +86,14 @@ export default function StepsClues() {
 
   return(
     <div className="steps-container">
-      <Steps current={current}>
-        {steps.map(item => (
-          <Step key={item.title} title={item.title} description={item.description} />
-        ))}
-      </Steps>
+      <div className="steps-first-container">
+        <Steps current={current}>
+          {steps.map(item => (
+            <Step key={item.title} title={item.title} description={item.description} />
+          ))}
+        </Steps>
+      </div>
+      
       <div className="steps-content">
         <Space direction="vertical">
           {steps[current].content}
